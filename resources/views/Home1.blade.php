@@ -18,7 +18,7 @@
       <!-- Blog Post -->
       @foreach ($article as $artic)
       <div class="card mb-4">
-        <img class="card-img-top" src="{{ $artic->imageurl }}" alt="">
+        <img class="card-img-top" src="{{asset('storage/'.$artic->imageurl)}}" alt="">
         <div class="card-body" style="background-color: #DCDCDC">
           <h2 class="card-title">{{ $artic->title }}</h2>
           <p class="card-text">{{ Str::limit($artic->content, 100, '...') }}</p>

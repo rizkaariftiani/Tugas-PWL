@@ -12,10 +12,7 @@ class CommentController extends Controller
     public function __construct()
     {
         //$this->middleware('auth');
-        $this->middleware(function($request, $next){
-         if(Gate::allows('manage-articles')) return $next($request);
-         abort(403, 'Anda tidak memiliki cukup hak akses');
-     });
+        
     }
     
     public function comment($id){
@@ -29,11 +26,20 @@ class CommentController extends Controller
     }
 
     public function add(){
+        $this->middleware(function($request, $next){
+         if(Gate::allows('manage-articles')) return $next($request);
+         abort(403, 'Anda tidak memiliki cukup hak akses');
+     });
+
         return view('AddComment');
     }
 
 
     public function create(Request $request){
+        $this->middleware(function($request, $next){
+         if(Gate::allows('manage-articles')) return $next($request);
+         abort(403, 'Anda tidak memiliki cukup hak akses');
+     });
         Comment::create([
             'title' => $request->title,
             'content' => $request->content
@@ -42,11 +48,19 @@ class CommentController extends Controller
     }
 
     public function edit($id){
+        $this->middleware(function($request, $next){
+         if(Gate::allows('manage-articles')) return $next($request);
+         abort(403, 'Anda tidak memiliki cukup hak akses');
+     });
         $comment = Comment::find($id);
         return view('editcomment',['comment'=>$comment]);
     }
 
     public function update($id, Request $request){
+        $this->middleware(function($request, $next){
+         if(Gate::allows('manage-articles')) return $next($request);
+         abort(403, 'Anda tidak memiliki cukup hak akses');
+     });
         $comment = Comment::find($id);
         $comment->title = $request->title;
         $comment->content = $request->content;
@@ -56,6 +70,10 @@ class CommentController extends Controller
 
 
     public function delete($id){
+        $this->middleware(function($request, $next){
+         if(Gate::allows('manage-articles')) return $next($request);
+         abort(403, 'Anda tidak memiliki cukup hak akses');
+     });
         $comment = Comment::find($id);
         $comment->delete();
         return redirect('/mKomen');

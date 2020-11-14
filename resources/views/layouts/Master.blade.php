@@ -39,11 +39,11 @@
            @endcan
          </li>
 
-         <!--<li class="nav-item {{ Route::is('about') ? 'active' : '' }}">
+         <li class="nav-item {{ Route::is('about') ? 'active' : '' }}">
            @can('user-display')
            <a class="nav-link" href="/about">About</a>   
            @endcan
-         </li>-->
+         </li>
 
          <li class="nav-item {{ Route::is('fact') ? 'active' : '' }}">
            @can('user-display')

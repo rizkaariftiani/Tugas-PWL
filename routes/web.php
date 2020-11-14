@@ -1,7 +1,4 @@
-  
 <?php
-
-
 
 
 
@@ -29,6 +26,8 @@ Route::get('/home', 'Home1Controller@index')->name('home');
 
 Route::get('/manage', 'ArticleController@manage')->name('manage');
 
+
+//Manage Article
 Route::get('/manage/add','ArticleController@add');
 
 Route::post('/manage/create','ArticleController@create');
@@ -39,6 +38,10 @@ Route::post('/manage/update/{id}','ArticleController@update');
 
 Route::get('/manage/delete/{id}','ArticleController@delete');
 
+Route::get('/manage/cetak_pdf', 'ArticleController@cetak_pdf');
+
+
+//Manage Comment (ABOUT)
 Route::get('/about', 'AboutController@comment');
 
 Route::get('/comment/{id}', 'CommentController@comment');
@@ -55,6 +58,8 @@ Route::post('/mKomen/update/{id}','CommentController@update');
 
 Route::get('/mKomen/delete/{id}','CommentController@delete');
 
+
+//Manage User
 Route::get('/user/{id}', 'UserController@user');
 
 Route::get('/mUser', 'UserController@manage')->name('manage');

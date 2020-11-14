@@ -15,6 +15,7 @@ class ModifTableUsers extends Migration
     {
         Schema::table('users',function (Blueprint $table){
            $table->string("roles");
+                ->nullable();
        });
 
     }

@@ -7,7 +7,9 @@
 <div class="col-lg-8"></div>
 <h1 class="my-4">PENGELOLAAN ARTIKEL</h1>
 
-<a href="manage/add" class="btn btn-secondary btn-lg btn-block">Tambah Data Artikel</a>
+<a href="/manage/add" class="btn btn-secondary btn-lg btn-block">Tambah Data Artikel</a>
+<a href="/manage/cetak_pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
+
 
 <div class="card body"></div>
 <table class="table table-bordered table-striped">

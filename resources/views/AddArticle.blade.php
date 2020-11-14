@@ -21,8 +21,8 @@
    </div>
    <div class="form-group">
      <label for="image">Image Url</label>
-     <input type="text" class="form-control"
-     required="required" name="image"></br>
+     <input type="file" class="form-control" required="required" name="image"></br>
+     <form action="/manage/create" method="post" enctype="multipart/form-data">
    </div>
 
    <div class="card mb-3" style="max-width: 540px;">
