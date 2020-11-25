@@ -10,7 +10,7 @@
 
 
 
-	<form action="/mUser/update/{{$user->id}}" method="post">
+	<form action="/mUser/update/{{$user->id}}" method="post" enctype="multipart/form-data">
 		{{csrf_field()}}
 		<input type="hidden" name="id" value="{{$user->id}}"></br>
 		<div class="form-group">
@@ -23,6 +23,11 @@
 				<option value="Administrator">Administrator</option>
 				<option value="User">User</option>
 			</select>
+		</div>
+		<div class="form-group">
+			<label for="image">Image Url</label>
+			<input type="file" class="form-control" required="required" name="image" value="{{$user->imageurl}}"></br>
+			<img width="150px" src="{{asset('storage/'.$user->imageurl)}}">
 		</div>
 
 		<button type="submit" name="edit" class="btn btn-primary float-right">Ubah Data</button><br><br>

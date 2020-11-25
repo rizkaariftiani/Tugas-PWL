@@ -7,6 +7,8 @@
 <div class="col-lg-8"></div>
 <h1 class="my-4">PENGELOLAAN USER</h1>
 
+<a href="/mUser/add" class="btn btn-secondary btn-lg btn-block">Tambah User</a>
+<a href="/mUser/cetak_pdf" class="btn btn-primary btn-lg btn-block" target="_blank">CETAK PDF</a>
 
 
 <div class="card body"></div>

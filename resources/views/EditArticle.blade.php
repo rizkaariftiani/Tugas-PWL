@@ -25,8 +25,7 @@
 		</div>
 		<div class="form-group">
 			<label for="image">Image Url</label>
-			<input type="file" class="form-control"
-			required="required" name="image" value="{{$article->imageurl}}"></br>
+			<input type="file" class="form-control" required="required" name="image" value="{{$article->imageurl}}"></br>
 			<img width="150px" src="{{asset('storage/'.$article->imageurl)}}">
 		</div>
 		<button type="submit" name="edit" class="btn btn-primary float-right">Ubah Data</button><br><br>

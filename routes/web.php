@@ -64,8 +64,14 @@ Route::get('/user/{id}', 'UserController@user');
 
 Route::get('/mUser', 'UserController@manage')->name('manage');
 
+Route::get('/mUser/add','UserController@add');
+
+Route::post('/mUser/create','UserController@create');
+
 Route::get('/mUser/edit/{id}','UserController@edit');
 
 Route::post('/mUser/update/{id}','UserController@update');
 
 Route::get('/mUser/delete/{id}','UserController@delete');
+
+Route::get('/mUser/cetak_pdf', 'UserController@cetak_pdf');

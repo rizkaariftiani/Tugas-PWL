@@ -12,25 +12,25 @@
 		}
 	</style>
 	<center>
-		<h5>Laporan Artikel</h4>
+		<h5>Laporan User</h4>
 		</center>
 		<table class='table table-bordered'>
 			<thead>
 				<tr>
 					<th>No</th>
-					<th>Judul</th>
-					<th>Isi</th>
+					<th>Nama</th>
+					<th>Email</th>
 					<th>Gambar</th>
 				</tr>
 			</thead>
 			<tbody>
 				@php $i=1 @endphp
-				@foreach($article as $a)
+				@foreach($user as $u)
 				<tr>
 					<td>{{ $i++ }}</td>
-					<td>{{$a->title}}</td>
-					<td>{{$a->content}}</td>
-					<td><img width="150px" src="{{('storage/'.$a->imageurl)}}"></td>
+					<td>{{$u->name}}</td>
+					<td>{{$u->email}}</td>
+					<td><img width="150px" src="{{('storage/'.$u->imageurl)}}"></td>
 				</tr>
 				@endforeach
 			</tbody>
